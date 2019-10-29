@@ -1,26 +1,11 @@
-tab = []
-print('Podaj tyle liczb ile chcesz. Aby przestac wcisnij enter przy pustym polu')
-
-czypetla = True
-
-while czypetla:
-    try:
-        a = float(input())
-        tab.append(a)
-    except ValueError:
-        czypetla = False
-
 suma = 0
 
-for n in tab:
-    suma += n
+n = int(input('Ile liczb chcesz dodac do sredniej: '))
 
-avg = suma/len(tab)
+for i in range(0,n):
+    a = float(input('Podaj liczbę do średniej: '))
+    suma += a
 
-print('Srednia liczb:', avg)
+avg = suma/n
 
-if avg % 2 == 0:
-    print('Srednia jest parzysta')
-else:
-    print('Srednia jest nieparzysta')
-
+print('Srednia:', avg)
