@@ -1,8 +1,6 @@
 class liczba_losowa:
     def losuj01(self):
-        from random import seed
         from random import random
-        seed(1)
         return print(random())
 
 
@@ -19,29 +17,29 @@ class inna_losowa(liczba_losowa):
             self.randomFloat()
 
     def randomInt(self):
-        from random import seed
         from random import randint
-        seed(1)
-        for _ in range(10):
-            value = randint(0, 10)
-            print(value)
+        value = randint(0, 10)
+        print(value)
 
     def randomFloat(self):
-        from random import seed
         from random import gauss
-        seed(1)
-        for _ in range(10):
-            value = gauss(0, 5)
-            print(value)
+        value = gauss(0, 10)
+        print(value)
 
 
 newLiczba_Losowa = liczba_losowa()
 
+print('-----------------------')
+print('Liczba losowa [0,1]')
 newLiczba_Losowa.losuj01()
-print('\n-----------------------\n')
+print('-----------------------')
 print('Wybierz operacje:')
 print('1.Podstawowa')
-print('2.Kilka calkowitych losowych')
-print('3.Kilka calkowitych liczb zmiennoprzecinkowych')
-opcja = int(input(''))
-newInna_Losowa = inna_losowa(opcja)
+print('2.Calkowita losowa')
+print('3.Zmiennoprzecinkowa losowa')
+try:
+    opcja = int(input(''))
+    newInna_Losowa = inna_losowa(opcja)
+except ValueError:
+    print('Zly format.')
+
