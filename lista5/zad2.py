@@ -16,15 +16,6 @@ class Student:
         print(f'Numer Albumu: {self.nr_albumu}')
         print(f'\n\n')
 
-
-    def zmien_imie(self, imie):
-        self.imie = imie
-        self.wypisz_studenta()
-
-    def zmien_nazwisko(self, nazwisko):
-        self.nazwisko = nazwisko
-        self.wypisz_studenta()
-
     def zmien_rok(self, rok):
         self.rok = rok
         self.wypisz_studenta()
@@ -40,3 +31,4 @@ class Student:
 student1 = Student('Jan', 'Kowalski', '2019', 'A', '123456')
 
 student1.zmien_grupa('B')
+

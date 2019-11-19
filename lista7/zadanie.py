@@ -8,8 +8,14 @@ class Blog:
             author = 'Default User'
         self.author = author
         file = open('blogdata.txt', 'rb')
-        self.blogData = pickle.load(file)
-        print(self.blogData)
+        try:
+            self.blogData = pickle.load(file)
+            self.run()
+        except EOFError:
+            self.blogData = {
+                "entries": []
+            }
+            self.add()
         file.close()
 
     def run(self):
@@ -54,7 +60,6 @@ def main():
     print('Witaj w aplikacji Blog! Podaj swoje imie')
     author = str(input('Imie: '))
     newBlog = Blog(author)
-    newBlog.run()
 
 
 if __name__ == '__main__':
