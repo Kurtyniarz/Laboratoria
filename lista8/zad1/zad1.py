@@ -2,6 +2,26 @@ import os
 import re
 
 
+# JAK PANI ZAPYTA CZEMU OS.WALK, A NIE OS.PATH.WALK, TO DLATEGO,
+# ZE KURWA OS.PATH.WALK JUZ NIE ISTNIEJE. JA NIE WIEM SKAD ONA BIEZRE TE POMYSLY
+# OGOLEM POPRAWNE ZADANIE TO JEST TA PIERWSZA WERSJA, TA DRUGA ZOSTAWIAM
+
+# Using os.path.walk / os.walk
+def findPathsN():
+    paths = []
+    for root, dirs, files in os.walk('./'):
+        for name in files:
+            if re.search("(.*?)praca(.*?)pdf$", name):
+                if root == './':
+                    paths.append(f'{root}{name}')
+                else:
+                    paths.append(f'{root}/{name}')
+
+    for f_path in paths:
+        print(f_path)
+
+
+# Using without os.path.walk / os.walk
 def findPaths():
     main_catalog = os.listdir('./')
     needed_paths = []
@@ -23,4 +43,5 @@ def findPaths():
         print(f_path)
 
 
-findPaths()
+findPathsN()
+# findPaths()
