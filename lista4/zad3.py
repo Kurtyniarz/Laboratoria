@@ -1,16 +1,18 @@
 def norecursive(word):
     return word == word[::-1]
 
+
 def norec2(word):
     czyjest = True
     dlg = len(word)
-    for i in range(0, int(dlg/2)):
+    for i in range(0, int(dlg / 2)):
         if czyjest:
             if word[i] != word[dlg - 1 - i]:
                 czyjest = False
         else:
             break
     return czyjest
+
 
 def recursive(word):
     if len(word) < 2:
