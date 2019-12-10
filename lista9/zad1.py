@@ -20,6 +20,16 @@ class Tests(unittest.TestCase):
                 """
                 self.assertIsInstance(col, (int, float))
 
+    def testSize(self):
+        col_counter = 0
+        row_counter = 0
+        for row in self.new_array:
+            for col in row:
+                col_counter += 1
+            row_counter += 1
+
+        self.assertEqual(col_counter/row_counter, row_counter)
+
     def testReturnCorrect(self):
         self.a = numpy.array(self.new_array)
         self.assertAlmostEqual(findDet(self.a), -18)
