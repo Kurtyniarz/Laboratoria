@@ -1,3 +1,13 @@
+"""
+Żeby  to gówno działało trzeba pobrać najpierw:
+https://www.microsoft.com/pl-pl/download/details.aspx?id=48145
+Potem na Windowsie trzeba wpierdolić w cmd:
+python -m pip install --user numpy scipy matplotlib ipython jupyter pandas sympy nose
+Jak się to wykona, to zajebiście
+Potem w PyCharmie klikacie File->Settings->Project Interpreter->rozwijacie liste->show all-> + -> zmieniacie na 'System Interpreter'
+Z listy wybieracie ściężkę do pythona zainstalowanego na waszym kompie i git wszystko powinno już działać
+"""
+
 from scipy import linalg
 import numpy as np
 import unittest
