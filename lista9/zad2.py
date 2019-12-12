@@ -1,6 +1,6 @@
 """
 Żeby  to gówno działało trzeba pobrać najpierw:
-https://www.microsoft.com/pl-pl/download/details.aspx?id=48145
+https://go.microsoft.com/fwlink/?LinkId=691126
 Potem na Windowsie trzeba wpierdolić w cmd:
 python -m pip install --user numpy scipy matplotlib ipython jupyter pandas sympy nose
 Jak się to wykona, to zajebiście
