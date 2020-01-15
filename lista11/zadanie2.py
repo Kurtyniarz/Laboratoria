@@ -91,7 +91,7 @@ def main():
                     client_id integer NOT NULL,
                     FOREIGN KEY (client_id) REFERENCES clients (id)
                     );
-                """
+                    """
 
     conn = createConn(db)
 
