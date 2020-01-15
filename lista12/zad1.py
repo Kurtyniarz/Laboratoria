@@ -9,7 +9,7 @@ file2 = pd.read_csv('dane2.csv')
 data2 = file2[['RokKwartal', 'Cena']]
 
 
-fig = plt.figure(figsize=(35, 20))
+fig = plt.figure(figsize=(40, 20))
 greedSpace = gridspec.GridSpec(nrows=4, ncols=1, height_ratios=[1, 3, 1, 1], hspace=0.3)
 
 ax0 = fig.add_subplot(greedSpace[0, 0])
@@ -40,4 +40,5 @@ ax3.set_title('Cena 1m2 powierzchni uzytkowej budynku mieszkalnego w latach 2013
 ax3.set_xlabel('Rok-Kwartał')
 ax3.set_ylabel('Cena')
 
+fig.set_tight_layout(False)
 plt.show()
